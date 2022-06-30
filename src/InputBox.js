@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TextareaAutosize from 'react-textarea-autosize';
 import { strip } from './utils';
 import { KEYS } from './constant';
-import SendIcon from './sendIcon.svg';
+import { ReactComponent as SendIcon } from './sendIcon.svg';
 
 export default function InputBox(props) {
   const [inputText, setInputText] = useState('');

@@ -1,8 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 
-import ErrorIcon from './errorIcon.svg';
-import avatar from './placeholder.png';
+import { ReactComponent as ErrorIcon } from './errorIcon.svg';
+import { ReactComponent as avatar } from './placeholder.png';
 
 function MessageBox(props) {
   const {
@@ -46,9 +46,6 @@ function MessageBox(props) {
         })
       : [];
 
-    const parser = new DOMParser();
-    const parsedText = parser.parseFromString(text, "text/html")
-
     return (
       <div
         className={`react-chat-messageBox ${
@@ -80,7 +77,7 @@ function MessageBox(props) {
                 <span/>
               </div>
             )}
-            {parsedText}
+            {text}
             {_buttons.length > 0 && (
               <div
                 className={

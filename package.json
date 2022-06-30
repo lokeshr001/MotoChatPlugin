@@ -1,19 +1,10 @@
 {
   "name": "moto-chat-plugin",
-  "version": "1.0.2",
-  "description": "A chat widget for react app",
-  "main": "dist/main.js",
+  "version": "1.1.0",
+  "description": "moto chat plugin",
+  "main": "src/index.js",
   "scripts": {
-    "test": "jest --config ./jest.config.js",
-    "build": "webpack --mode production --display-modules",
-    "test:watch": "npm run-script test --watch",
-    "eslint": "npx eslint . --fix",
-    "prettier": "./node_modules/.bin/prettier --write \"{src,tests}/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "snyk": "./node_modules/.bin/snyk test",
-    "prepush": "npm test --watchAll=false && npm run-script eslint && npm run-script snyk",
-    "precommit": "npm test --watchAll=false && npm run-script eslint && npm run-script snyk",
-    "prepublishOnly": "git push --tags",
-    "start": "webpack-dev-server --open --mode=development --config example/webpack.config.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "moment": "^2.29.1",
@@ -71,17 +62,12 @@
     "url": "git+https://github.com/lokeshr001/MotoChatPlugin.git"
   },
   "keywords": [
-    "chat",
-    "react",
-    "messenger",
-    "chatbot",
-    "bot"
+    "moto-chat-plugin"
   ],
-  "author": "Lokesh Ramchandani <lokeshr@motorola.com>",
-  "license": "MIT",
+  "author": "Lokesh Ramchandani",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/lokeshr001/MotoChatPlugin/issues"
   },
-  "homepage": "https://github.com/lokeshr001/MotoChatPlugin",
-  "snyk": true
+  "homepage": "https://github.com/lokeshr001/MotoChatPlugin#readme"
 }

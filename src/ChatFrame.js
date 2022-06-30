@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import RobotIcon from './comments.svg';
-import CloseIcon from './compress-alt.svg';
+import { ReactComponent as RobotIcon } from './comments.svg';
+import { ReactComponent as CloseIcon } from './compress-alt.svg';
 
 import './ChatFrame.css';
 
