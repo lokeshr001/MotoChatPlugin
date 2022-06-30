@@ -1,44 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="052099a6-7f6f-4269-8187-efa4ca922421" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MotoChatPlugin.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nvmrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.snyk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/changelog.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/Example.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/Example.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/bot.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" />
+    <list default="true" id="052099a6-7f6f-4269-8187-efa4ca922421" name="Changes" comment="1. added react html parsed package &#10;2. completed changes for the moto chat plugin requirements">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/screenshot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MessageBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ChatBox.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ChatFrame.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/InputBox.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/MessageBox.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/svgrMock.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656532829123</updated>
       <workItem from="1656532831080" duration="1579000" />
-      <workItem from="1656564534492" duration="9007000" />
+      <workItem from="1656564534492" duration="12743000" />
     </task>
     <servers />
   </component>
@@ -134,5 +103,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="resolved chat plugin issue and added only necessary files" />
+    <MESSAGE value="1. added react html parsed package &#10;2. completed changes for the moto chat plugin requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. added react html parsed package &#10;2. completed changes for the moto chat plugin requirements" />
   </component>
 </project>

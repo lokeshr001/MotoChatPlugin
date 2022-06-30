@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-
+import ReactHtmlParser from "react-html-parser";
 import { ReactComponent as ErrorIcon } from './errorIcon.svg';
 import { ReactComponent as avatar } from './placeholder.png';
 
@@ -77,7 +77,7 @@ function MessageBox(props) {
                 <span/>
               </div>
             )}
-            {text}
+            {ReactHtmlParser(text)}
             {_buttons.length > 0 && (
               <div
                 className={
