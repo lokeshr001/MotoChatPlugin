@@ -39,28 +39,4 @@ describe('chatFrame', () => {
     );
     expect(wrapper.find('div.Greeting').exists()).toBe(true);
   });
-  it('chatBox - onSendMessage', () => {
-    expect.assertions(1);
-    wrapper = mount(
-      <ChatFrame
-        chatbox={
-          <ChatBox
-            onSendMessage={onSendFunc}
-            userId={1}
-            messages={[]}
-            showTypingIndicator={true}
-            activeAuthor={{ username: 'user2', id: 2, avatarUrl: null }}
-          />
-        }
-        clickIcon={handleClickIcon}
-        showChatbox={true}
-        showIcon={false}
-      >
-        <div className="Greeting" style={{ width: '400px' }}>
-          👋 Hey, I’m a ChatBot! Want to see what I can do?
-        </div>
-      </ChatFrame>
-    );
-    expect(wrapper.find('div.react-chat-container').exists()).toBe(true);
-  });
 });

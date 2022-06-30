@@ -15,6 +15,7 @@ function MessageBox(props) {
     hasError,
     text,
   } = props;
+
   if (type === 'text' || type === 'indicator') {
     let time;
     if (timestamp) {
@@ -45,6 +46,9 @@ function MessageBox(props) {
         })
       : [];
 
+    const parser = new DOMParser();
+    const parsedText = parser.parseFromString(text, "text/html")
+
     return (
       <div
         className={`react-chat-messageBox ${
@@ -71,12 +75,12 @@ function MessageBox(props) {
           >
             {type === 'indicator' && (
               <div className="react-chat-typing-indicator">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span/>
+                <span/>
+                <span/>
               </div>
             )}
-            {text}
+            {parsedText}
             {_buttons.length > 0 && (
               <div
                 className={
@@ -100,7 +104,8 @@ function MessageBox(props) {
         </div>
       </div>
     );
-  } else if (type === 'notification') {
+  }
+  else if (type === 'notification') {
     return (
       <div className="text-center text-secondary react-chat-notification">
         {text}

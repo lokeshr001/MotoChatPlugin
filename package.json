@@ -1,6 +1,6 @@
 {
   "name": "moto-chat-plugin",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A chat widget for react app",
   "main": "dist/main.js",
   "scripts": {
