@@ -1,75 +1,89 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import PropTypes from 'prop-types';
 import TextareaAutosize from 'react-textarea-autosize';
 import { strip } from './utils';
 import { KEYS } from './constant';
-import { ReactComponent as SendIcon } from './sendIcon.svg';
+import SendIcon from './sendIcon.svg';
 
-export default function InputBox(props) {
-  const [inputText, setInputText] = useState('');
+class InputBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputText: ''
+    };
 
-  const handleOnChange = (e) => {
-    setInputText(e.target.value);
+    this.handleOnChange = this.handleOnChange.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
+    this.onKeyPress = this.onKeyPress.bind(this);
+  }
+
+  handleOnChange = (e) => {
+    this.setState({ inputText: e.target.value });
   };
 
-  const handleOnClick = (e) => {
-    const str = strip(inputText);
+  sendMessage = (message) => {
+    this.props.onSendMessage(message);
+    this.setState({ inputText: '' });
+  };
+
+  handleOnClick = (e) => {
+    const str = strip(this.state.inputText);
     if (str.length) {
-      sendMessage(str);
+      this.sendMessage(str);
     } else {
       // to do cannot send empty message
     }
   };
 
-  const onKeyPress = (e) => {
+  onKeyPress = (e) => {
     if (
-      (props.onSendKey === undefined || e[props.onSendKey]) &&
-      e.charCode === 13
+        (this.props.onSendKey === undefined || e[this.props.onSendKey]) &&
+        e.charCode === 13
     ) {
-      const str = strip(inputText);
+      const str = strip(this.state.inputText);
       if (str.length) {
-        sendMessage(str);
+        this.sendMessage(str);
       }
       e.preventDefault();
       return false;
     }
   };
 
-  const sendMessage = (message) => {
-    props.onSendMessage(message);
-    setInputText('');
-  };
-
-  return (
-    <div className={`react-chat-inputBox ${props.disabled ? 'disabled' : ''}`}>
-      <TextareaAutosize
-        maxRows={3}
-        className="react-chat-textarea"
-        placeholder={
-          props.disabled ? props.disabledInputPlaceholder : props.placeholder
-        }
-        value={inputText}
-        onChange={handleOnChange}
-        onKeyPress={onKeyPress}
-        autoFocus
-        disabled={props.disabled}
-      />
-      <button
-        className="react-chat-sendButton"
-        onClick={handleOnClick}
-        disabled={props.disabled}
-      >
-        <SendIcon
-          className={
-            props.disabled
-              ? 'react-chat-SendIcon-disable'
-              : 'react-chat-SendIcon'
-          }
-        />
-      </button>
-    </div>
-  );
+  render() {
+    return (
+        <div className={`react-chat-inputBox ${this.props.disabled ? 'disabled' : ''}`}>
+          <TextareaAutosize
+              maxRows={3}
+              className="react-chat-textarea"
+              placeholder={
+                this.props.disabled ? this.props.disabledInputPlaceholder : this.props.placeholder
+              }
+              value={this.state.inputText}
+              onChange={this.handleOnChange}
+              onKeyPress={this.onKeyPress}
+              autoFocus
+              disabled={this.props.disabled}
+          />
+          <button
+              className="react-chat-sendButton"
+              onClick={this.handleOnClick}
+              disabled={this.props.disabled}
+          >
+            <SendIcon
+                className={
+                  this.props.disabled
+                      ? 'react-chat-SendIcon-disable'
+                      : 'react-chat-SendIcon'
+                }
+            />
+          </button>
+        </div>
+    );
+  }
 }
+
+export default InputBox;
 
 InputBox.propTypes = {
   onSendMessage: PropTypes.func.isRequired,
