@@ -107,5 +107,5 @@ dist
 
 .idea/
 /build/
-/node_modules/
-/.idea/
+**/node_modules
+**/.idea
