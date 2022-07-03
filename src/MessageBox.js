@@ -1,8 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import ReactHtmlParser from "react-html-parser";
-import { ReactComponent as ErrorIcon } from './errorIcon.svg';
-import { ReactComponent as avatar } from './placeholder.png';
+import ErrorIcon from './errorIcon.svg';
+import avatar from './placeholder.png';
 
 function MessageBox(props) {
   const {

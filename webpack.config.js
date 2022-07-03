@@ -1,12 +1,13 @@
 const pkg = require('./package.json');
-const nodeExternals = require('webpack-node-externals');
+var path = require("path");
 
 module.exports = {
+  mode: "production",
   entry: './src/index.js',
   output: {
-    filename: 'main.js',
-    library: pkg.name,
-    libraryTarget: 'commonjs2',
+    path: path.resolve("build"),
+    filename: "index.js",
+    libraryTarget: "commonjs2"
   },
   module: {
     rules: [
@@ -19,7 +20,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        loader: "style-loader!css-loader"
       },
       {
         test: /\.(png|jpg|gif)$/i,
@@ -38,6 +39,7 @@ module.exports = {
       },
     ],
   },
-  target: 'node', // ingore all dependencies
-  externals: [nodeExternals()],
+  externals: {
+    react: "react"
+  }
 };

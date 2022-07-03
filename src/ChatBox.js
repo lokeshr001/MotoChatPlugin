@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { KEYS, TIMESTAMPFORMAT } from './constant';
 import InputBox from './InputBox';
 import MessageBox from './MessageBox';
-
 import './ChatBox.css';
 
 class ChatBox extends React.Component {
